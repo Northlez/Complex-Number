@@ -1,0 +1,6 @@
+﻿  ComplexNumber.cpp
+d:\c++\complex number\complex number\complexnumber.cpp(19): warning C4477: "scanf_s": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "double"
+d:\c++\complex number\complex number\complexnumber.cpp(26): warning C4477: "scanf_s": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "double"
+d:\c++\complex number\complex number\complexnumber.cpp(33): warning C4477: "scanf_s": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "double"
+d:\c++\complex number\complex number\complexnumber.cpp(33): warning C4477: "scanf_s": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "2" имеет тип "double"
+d:\c++\complex number\complex number\complexnumber.cpp(79): error C4716: ComplexNumber::operator+=: должна возвращать значение
