@@ -25,10 +25,10 @@
 	};
 
 
-	void ComplexNumber::Input()//Ввод полного числа
+	void ComplexNumber::Input(float RN, float IN)//Ввод полного числа
 	{
-		cout << "По очереди введите дейтсвительную и мнимую часть комплексного числа" << endl;
-		scanf_s("%f %f", _x, _y);
+		_x = RN;
+		_y = IN;
 	};
 
 
@@ -48,7 +48,7 @@
 	{
 		if (_y>0) cout << _x << "+i" << _y << endl;//Если y>0, то число выводится в формате x+iy
 		else if (_y == 0) cout << _x << endl;//Если y=0, то число выводится в формате x
-		else cout << _x << "-i" << abs(_y) << endl;//Если y<0, то число выводится в формате x-iy(y выводится как абсолютное значение)
+		else cout << _x << "-i" << std::abs(_y) << endl;//Если y<0, то число выводится в формате x-iy(y выводится как абсолютное значение)
 	};
 
 	ComplexNumber ComplexNumber::reverse()//Нахождение сопряжённого
@@ -58,7 +58,7 @@
 		temp._y = _y * -1;
 		return(temp);
 	}
-	float ComplexNumber::absol()//Модуль
+	float ComplexNumber::abs()//Модуль
 	{
 		float abs;
 		abs = sqrt(_x * _x + _y * _y);
@@ -116,7 +116,7 @@
 		_x /= N;
 	}
 
-	ComplexNumber ComplexNumber::operator+(ComplexNumber cn2)
+	const ComplexNumber ComplexNumber::operator+(ComplexNumber cn2)
 	{
 		ComplexNumber cn1 = *this;
 		cn1._x += cn2._x;
@@ -124,7 +124,7 @@
 		return cn1;
 	}
 
-	ComplexNumber ComplexNumber::operator-(ComplexNumber cn2)
+	const ComplexNumber ComplexNumber::operator-(ComplexNumber cn2)
 	{
 		ComplexNumber cn1 = *this;
 		cn1._x -= cn2._x;
@@ -132,7 +132,7 @@
 		return cn1;
 	}
 
-	ComplexNumber ComplexNumber::operator *(ComplexNumber cn2)//Умножение
+	const ComplexNumber ComplexNumber::operator *(ComplexNumber cn2)//Умножение
 	{
 		ComplexNumber Z;
 		ComplexNumber cn1 = *this;
@@ -141,7 +141,7 @@
 		return Z;
 	}
 
-	ComplexNumber ComplexNumber::operator /(ComplexNumber cn2)
+	const ComplexNumber ComplexNumber::operator /(ComplexNumber cn2)
 	{
 		ComplexNumber Z;
 		ComplexNumber cn1 = *this;
@@ -150,28 +150,28 @@
 		return Z;
 	}
 
-	ComplexNumber ComplexNumber::operator +(float N)
+	const ComplexNumber ComplexNumber::operator +(float N)
 	{
 		ComplexNumber cn = *this;
 		cn._x += N;
 		return cn;
 	}
 
-	ComplexNumber ComplexNumber::operator -(float N)
+	const ComplexNumber ComplexNumber::operator -(float N)
 	{
 		ComplexNumber cn = *this;
 		cn._x -= N;
 		return cn;
 	}
 
-	ComplexNumber ComplexNumber::operator *(float N)//Умножение
+	const ComplexNumber ComplexNumber::operator *(float N)//Умножение
 	{
 		ComplexNumber cn = *this;
 		cn._x *= N; 
 		return cn;
 	}
 
-	ComplexNumber ComplexNumber::operator /(float N)
+	const ComplexNumber ComplexNumber::operator /(float N)
 	{
 		ComplexNumber cn = *this;
 		cn._x /= N;

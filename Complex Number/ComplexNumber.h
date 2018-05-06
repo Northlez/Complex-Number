@@ -17,7 +17,7 @@ public:
 
 	void SetImaginaryNumber(float IN);
 
-	void Input();
+	void Input(float RN, float IN);
 
 	float GetRealNumber();
 
@@ -27,7 +27,7 @@ public:
 
 	ComplexNumber reverse();
 
-	float absol();
+	float abs();
 
 	float arg();
 
@@ -47,19 +47,19 @@ public:
 
 	inline ComplexNumber operator /=(float N);
 
-	ComplexNumber operator+ (ComplexNumber cn2);
+	const ComplexNumber operator+ (ComplexNumber cn2);
 
-	ComplexNumber operator- (ComplexNumber cn2);
+	const ComplexNumber operator- (ComplexNumber cn2);
 
-	ComplexNumber operator* (ComplexNumber cn2);
+	const ComplexNumber operator* (ComplexNumber cn2);
 
-	ComplexNumber operator/ (ComplexNumber cn2);
+	const ComplexNumber operator/ (ComplexNumber cn2);
 
-	ComplexNumber operator+ (float N);
+	const ComplexNumber operator+ (float N);
 
-	ComplexNumber operator- (float N);
+	const ComplexNumber operator- (float N);
 
-	ComplexNumber operator* (float N);
+	const ComplexNumber operator* (float N);
 
-	ComplexNumber operator/ (float N);
+	const ComplexNumber operator/ (float N);
 }; 
