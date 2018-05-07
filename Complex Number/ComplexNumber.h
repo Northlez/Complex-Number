@@ -23,7 +23,7 @@ public:
 
 	float GetImaginaryNumber();
 
-	void Output();
+	ComplexNumber ComplexNumber::Output();
 
 	ComplexNumber reverse();
 

@@ -44,11 +44,9 @@
 	};
 
 
-	void ComplexNumber::Output()//Вывод числа на экран
+	ComplexNumber ComplexNumber::Output()//Вывод числа на экран
 	{
-		if (_y>0) cout << _x << "+i" << _y << endl;//Если y>0, то число выводится в формате x+iy
-		else if (_y == 0) cout << _x << endl;//Если y=0, то число выводится в формате x
-		else cout << _x << "-i" << std::abs(_y) << endl;//Если y<0, то число выводится в формате x-iy(y выводится как абсолютное значение)
+		return *this;	
 	};
 
 	ComplexNumber ComplexNumber::reverse()//Нахождение сопряжённого
